@@ -1,0 +1,9 @@
+# Attributes vs properties
+
+- When we write HTML source code, we define attributes on element tags.
+- But when browser parses this HTML and converts it into DOM.
+- Corresponding to every HTML element, we have a node in the tree. This node is an object.
+- And every object has a key value pair.
+- The attributes on element becomes property in the node object.
+- Sometimes there is one to one mapping like id, value, type etc.
+- Sometimes it's not like class becomes className, colspan becomes colSpan.
