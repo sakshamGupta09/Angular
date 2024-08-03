@@ -1,0 +1,31 @@
+# Class and style binding
+
+We could have used attribute and property binding as well like [attr.class] or [className]. But since it's such a common operation
+we have class and style bindings explicitly available.
+
+## Binding to a single class
+
+`[class.sale]="onSale"`
+
+If the expression evaluates to a truthy value, class will be dynamically added else removed.
+
+## Binding to multiple classes
+
+`[class]="classExpression"`
+
+**Class expression can be **
+
+1. String of class names
+
+`"my-class-1 my-class-2 my-class-3"`
+
+2. An object with class names as the keys and truthy or falsy expressions as the values.
+
+`public classNames = { a: true, b: false, c: true };`
+
+3. An array of class names.
+
+`['foo', 'bar']`
+
+> IMPORTANT: With any object-like expression—such as object, Array, Map, or Set —the identity of the object must change
+ for Angular to update the class list. Updating the property without changing object identity has no effect.
