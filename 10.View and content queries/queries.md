@@ -10,7 +10,7 @@
 - View refers to the elements defined in the component's own template.
 - View queries search elements in the component's view.
 - Since we are querying the view, we should run our queries in `AfterViewInit`.
-- View query results become available in the ngAfterViewInit lifecycle method. Before this the value is `undefined`.
+- View query results become available in the `ngAfterViewInit` lifecycle method. Before this the value is `undefined`.
 - If the query does not find a result, its value is `undefined`.
 - This happens if the target is hidden by `@If`.
 
