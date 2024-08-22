@@ -7,7 +7,7 @@
 
 ## View queries
 
-- View refers to the elements defined in the component's own template.
+- View refers to the elements defined in the component's own template not projected from parent.
 - View queries search elements in the component's view.
 - Since we are querying the view, we should run our queries in `AfterViewInit`.
 - View query results become available in the `ngAfterViewInit` lifecycle method. Before this the value is `undefined`.
