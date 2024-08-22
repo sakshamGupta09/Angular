@@ -13,7 +13,7 @@
 - Since we are querying the view, we should run our queries in `AfterViewInit`.
 - View query results become available in the `ngAfterViewInit` lifecycle method. Before this the value is `undefined`.
 - If the query does not find a result, its value is `undefined`.
-- This happens if the target is hidden by `@If`.
+- This happens if the target is hidden by `@If` or not present in the view at all.
 
 ## @ViewChild
 
