@@ -50,6 +50,7 @@
 - But what about DOM elements.
 - This first parameter for each query decorator is its locator.
 - We can specify a string which matches witrh a template reference variable.
+- `@ViewChild('save') saveButton: ElementRef<HTMLButtonElement>;`
 
 ## Query options
 
