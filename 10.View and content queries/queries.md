@@ -24,3 +24,4 @@
 
 - To get multiple matching results.
 - `@ViewChildren(CustomCardAction) actions: QueryList<CustomCardAction>;`
+- We can iterate this list using `forEach`.
