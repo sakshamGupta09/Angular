@@ -43,3 +43,22 @@
 - To get multiple matching results.
 - `@ContentChildren(CustomCardAction) actions: QueryList<CustomCardAction>;`
 - We can iterate this list using `forEach`.
+
+## Query Locators
+
+- We now know how to query for a component or a directive.
+- But what about DOM elements.
+- This first parameter for each query decorator is its locator.
+- We can specify a string which matches witrh a template reference variable.
+
+## Query options
+
+- Query decorator accepts a second argument which is an object.
+
+## Static queries
+
+- `@ViewChild` and `@ContentChild` queries accept the static option. Not for children.
+- `@ViewChild(CustomCardHeader, {static: true}) header: CustomCardHeader;`.
+- If the target element is always present and not conditionally rendered.
+- We do not need to wait till `afterViewInit` hook and can access it inside `OnInit` hook.
+
