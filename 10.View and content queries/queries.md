@@ -3,6 +3,7 @@
 ## Why
 
 - To access reference of child components, directives, DOM elements present in my template.
+- If we have a child component, directive some DOM node in our template, we can access it in the model file.
 - There are two types of queries
 
 ## View queries
