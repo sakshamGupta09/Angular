@@ -26,3 +26,20 @@
 - To get multiple matching results.
 - `@ViewChildren(CustomCardAction) actions: QueryList<CustomCardAction>;`
 - We can iterate this list using `forEach`.
+
+## Content queries
+
+- Seraches in the content that has been projected by the parent.
+- Results are available inside `afterContentInit` hook.
+
+## @ContentChild
+
+- To get a single result from the query.
+- First match is returned.
+- `@ContentChild(CustomCardHeader) header: CustomCardHeader;`
+
+## @ContentChildren
+
+- To get multiple matching results.
+- `@ContentChildren(CustomCardAction) actions: QueryList<CustomCardAction>;`
+- We can iterate this list using `forEach`.
