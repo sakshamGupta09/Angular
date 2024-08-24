@@ -10,3 +10,9 @@
 - That makes our codebase hard to maintain.
 - **Maintaining Component Encapsulation** We can be certain that styles introduced in a component won't affect other 
   components.
+
+
+## How Angular achieves scoping
+
+- Every component has a property called `encapsulation` in the decorators' metadata.
+- It can take three values `None`, `Emulated`, `ShadowDom`
