@@ -28,3 +28,21 @@
 -  Unique id is also inserted into the CSS selectors defined in your component's styles.
 -  `.card[_ngcontent-ng-c1253002314]`
 -  Since this id is unique, it will never reference any other element.
+
+## ::ng-deep
+
+- Styles declared with this pseudoclass becomes global.
+- Angular team strongly discourages this.
+
+## ViewEncapsulation.None
+
+- This mode disables all style encapsulation for the component.
+- Any styles associated with the component behave as global styles.
+
+
+## ViewEncapsulation.ShadowDom
+
+- The problem with `Emulated ` mode was that the outside styles could still affect a component.
+- This mode strictly guarantees that only that component's styles apply to elements in the component's template.
+- Global styles cannot affect elements in a shadow tree.
+- Styles inside the shadow tree cannot affect elements outside of that shadow tree.
