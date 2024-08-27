@@ -26,4 +26,4 @@
 - How do we learn which input property has changed?
 - OnChanges accepts `SimpleChanges` which is an object.
 - This object is a record. Key is inoput property name and value is `SimpleChange`.
-- `SimpleChange` contains information like `previousValue`, `` 
+- `SimpleChange` contains information like `previousValue`, `currentValue` and `firstChange`. 
