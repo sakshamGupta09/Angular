@@ -8,12 +8,12 @@
 - While angular is following a step by step process to render or update a component, it intimates us that this step is
   now done, if you want to perform some action you can do it now.
 
-## Constructor
+## 1.Constructor
 
 - Runs when angular creates an instance of the component class.
 - An instance is now available.
 
-## OnChanges
+## 2.OnChanges
 
 - Runs everytime component's inputs have changed including the first time.
 - Comparison is done by `===`.
