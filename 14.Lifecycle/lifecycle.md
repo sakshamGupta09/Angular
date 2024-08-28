@@ -52,7 +52,7 @@
 
 ## 6. AfterContentChecked
 
-- Runs everytime after its content have been checked for changes.
+- Runs everytime after its content have been checked for changes meaning bindings have updated.
 - Used to access the updated state of `content queries`.
 - Since `ContentInit` runs only once, if we have to read the latest content query result we can use this hook.
 - Runs very frequently so should be avoided.
