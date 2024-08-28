@@ -41,3 +41,9 @@
 - Befor checking it intimates us that I am going to perform checking.
 - This hook runs very frequently, everytime befor angular goes to check for changes. Avoid defining it.
 - Can be used for manual change detection.
+
+## 5. AfterContentInit
+
+- A component can recieve content from parent. This hook runs after the content is initialized.
+- Use this to read the results of `content queries`.
+- Do not mutate state. 
