@@ -27,4 +27,17 @@
 - How do we learn which input property has changed?
 - OnChanges accepts `SimpleChanges` which is an object.
 - This object is a record. Key is inoput property name and value is `SimpleChange`.
-- `SimpleChange` contains information like `previousValue`, `currentValue` and `firstChange`. 
+- `SimpleChange` contains information like `previousValue`, `currentValue` and `firstChange`.
+
+## 3. OnInit
+
+- Runs after angular has initialized all component inputs. We can access input properties here.
+- Runs only once. So, ideal for setting up subscriptions or doing one time activities like api calls.
+- Can update state.
+
+## 4. DoCheck
+
+- Angular performs change detection to learn if our bindings have changed.
+- Befor checking it intimates us that I am going to perform checking.
+- This hook runs very frequently, everytime befor angular goes to check for changes. Avoid defining it.
+- Can be used for manual change detection.
