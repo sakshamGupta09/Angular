@@ -72,3 +72,24 @@
 - Used to access the updated state of `view queries`.
 - Since `ViewInit` runs only once, if we have to read the latest view query result we can use this hook.
 - Runs very frequently so should be avoided.
+
+## 9. AfterRender
+
+- At a time in a page, we might have multiple components. When angular has rendered all of them into the DOM it runs.
+- These functions are different from the other lifecycle hooks described in this guide.
+- The execution of render callbacks are not tied to any specific component instance, but instead an application-wide hook.
+- `afterRender` and `afterNextRender` must be called in an injection context, typically a component's constructor.
+- If we have to use DOM api's in angular, this is the ideal hook.
+
+## 10. OnDestroy
+
+- Destroy means that component gets hidden using `@If` or navigating to another page.
+- Just before the component is destroyed. Do you have any last wish.
+- Use this to cleanup subscriptions or store some information.
+
+## DestroyRef
+
+- All the cleanup code currently resides in `Ondestroy`.
+- We want to keep the setup code and cleanup code closer or together.
+- `constructor(private destroyRef: DestroyRef) {}`.
+- `destroyRef.onDestroy(() => {})`
