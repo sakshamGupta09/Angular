@@ -45,6 +45,7 @@
 ## 5. AfterContentInit
 
 - A component can recieve content from parent. This hook runs once after the content is initialized.
+- As per the initial state of the component, content is initialized.
 - Use this to read the results of `content queries`.
 - Do not mutate state.
 - Content is initialized before view.
@@ -53,6 +54,7 @@
 ## 6. AfterContentChecked
 
 - Runs everytime after its content have been checked for changes meaning bindings have updated.
+- When the state updates, content updates as well. It runs after that.
 - Used to access the updated state of `content queries`.
 - Since `ContentInit` runs only once, if we have to read the latest content query result we can use this hook.
 - Runs very frequently so should be avoided.
