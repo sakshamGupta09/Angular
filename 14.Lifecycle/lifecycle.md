@@ -46,4 +46,11 @@
 
 - A component can recieve content from parent. This hook runs after the content is initialized.
 - Use this to read the results of `content queries`.
-- Do not mutate state. 
+- Do not mutate state.
+- Content is initialized before view.
+- Runs only once.
+
+## 6. AfterContentChecked
+
+- Runs everytime after its content have been checked for changes.
+- Used to access the updated state of `content queries`.
