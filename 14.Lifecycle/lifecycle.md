@@ -16,6 +16,7 @@
 ## 2. OnChanges
 
 - Runs everytime component's inputs have changed including the first time.
+- If component has no inputs, it won't execute.
 - Comparison is done by `===`.
 - Can be used to react to changes in the input properties.
 - Can update the state in this hook.
