@@ -19,3 +19,19 @@
 
 ## Default change detection
 
+- Whenever zone tells angular about completion of async event, angular checks the entire component tree for changes.
+- This is bad because it is checking components which have nothing to do with the event.
+
+## On Push
+
+- Components with `OnPush` tells angular that please don not check my view bindings and that of my children's until I explicitly tell you to.
+- I will decide if my state has changed and will raise a flag so that you can come and check my bindings.
+
+## MarkForCheck vs detectChanges
+
+- `detectChanges` triggers change detection.
+- `markForCheck` just marks a component dirty and does not trigger a change detection. Because when async operation completes, zone will again ask angular to perform change detection.
+- So with `OnPush` we should always use `markForCheck` otherwise with `detectChanges` we would be performing change detection two times.
+- With `markForCheck` we end up with just one change detection cycle.
+- All the ancestors of the component are also marked as dirty. Because when angular reaches to parent from top to bottom and if parent isn't marked dirty, it will not check child's bindings as well.
+
