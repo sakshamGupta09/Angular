@@ -36,3 +36,9 @@
 - With `markForCheck` we end up with just one change detection cycle.
 - All the ancestors of the component are also marked as dirty. Because when angular reaches to parent from top to bottom and if parent isn't marked dirty, it will not check child's bindings as well.
 
+## Should we always call markForCheck when model changes
+
+- By default for event handlers, angular marks the view dirty. So if we are updating data model within event handler we do not need to call `markForCheck`.
+- When the `Input` property of a component changes, it is marked dirty by default. Values are compared by reference(===).
+- Async pipes
+
