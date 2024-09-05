@@ -39,6 +39,6 @@
 ## Should we always call markForCheck when model changes
 
 - By default for event handlers, angular marks the view dirty. So if we are updating data model within event handler we do not need to call `markForCheck`.
-- When the `Input` property of a component changes, it is marked dirty by default. Values are compared by reference(===).
+- When the `Input` property of a component changes, it is marked dirty by default. Values are compared by reference(===). This happens when angular checks bindings of parent.
 - Async pipes
 
