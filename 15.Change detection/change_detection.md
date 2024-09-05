@@ -13,3 +13,9 @@
 ## Zone js
 
 - Zone js notifies angular when the async events has completed, so that angular can perform change detection.
+- Zone js cannot tell angular what state in what component has changed. It just tells that some state in some component might have changed.
+- That is why angular has to check for changes for the entire view tree.
+- This is the problem that signals solve.
+
+## Default change detection
+
