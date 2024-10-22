@@ -32,7 +32,7 @@
 
 ## MarkForCheck vs detectChanges
 
-- `detectChanges` triggers change detection.
+- `detectChanges` triggers change detection for the component and it's children.
 - `markForCheck` just marks a component dirty and does not trigger a change detection. Because when async operation completes, zone will again ask angular to perform change detection.
 - So with `OnPush` we should always use `markForCheck` otherwise with `detectChanges` we would be performing change detection two times.
 - With `markForCheck` we end up with just one change detection cycle.
