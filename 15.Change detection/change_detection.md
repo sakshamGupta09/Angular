@@ -3,6 +3,7 @@
 - Angular's job is to keep the model and view in sync.
 - Whenever the model is updated, the view is synchronized as well.
 - Change detection means checking if the model has updated and then update the bindings in the view accordingly.
+- The process is clear but when does it gets triggered.
 
 ## When does our application state changes
 
