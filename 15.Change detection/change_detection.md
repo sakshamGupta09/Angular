@@ -25,7 +25,7 @@
 
 ## On Push
 
-- Components with `OnPush` tells angular that please don not check my view bindings and that of my children's until I explicitly tell you to.
+- Components with `OnPush` tells angular that please do not check my view bindings and that of my children's until I explicitly tell you to.
 - I will decide if my state has changed and will raise a flag so that you can come and check my bindings.
 - Angular will still traverse every component from top to bottom to check for changes, but those who are using `OnPush` but are not dirty will not be checked neither will be their children.
 - Now the question is how do we show a flag to angular so that it can check our view bindings.
