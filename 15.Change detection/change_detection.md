@@ -8,7 +8,7 @@
 ## When does our application state changes
 
 - We know view updates, when model does. So when does our model change?
-- Typically async operations like `setTimeout`, `setInterval`, `httpRequests`, `DOM Events` can cause a state update.
+- Typically async operations like `setTimeout`, `setInterval`, `httpRequests`, `DOM Events` native web APIS can cause a state update.
 - We need a mechanism which tells angular about the completion of async events.
 
 
